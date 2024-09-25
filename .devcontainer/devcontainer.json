@@ -1,0 +1,37 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+{
+	"name": "Ng",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"build": {
+		"dockerfile": "./Dockerfile"
+	},
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "latest"
+		}
+	},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+		4200
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Angular.ng-template",
+				"ms-azuretools.vscode-docker",
+				"dbaeumer.vscode-eslint",
+				"mhutchie.git-graph",
+				"eamodio.gitlens",
+				"christian-kohler.path-intellisense",
+				"esbenp.prettier-vscode",
+				"PKief.material-icon-theme"
+			]
+		}
+	}
+	// Configure tool-specific properties.
+	// "customizations": {},
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
