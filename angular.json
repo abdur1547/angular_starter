@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "temp": {
+    "ng_stater": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/temp",
+            "outputPath": "dist/build",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -56,7 +56,13 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -65,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "temp:build:production"
+              "buildTarget": "ng_stater:build:production"
             },
             "development": {
-              "buildTarget": "temp:build:development"
+              "buildTarget": "ng_stater:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -96,11 +102,23 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "f6432659-aee7-430c-864a-c84f42b53616"
+    "analytics": "f6432659-aee7-430c-864a-c84f42b53616",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

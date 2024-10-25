@@ -8,8 +8,8 @@ RUN yarn install
 
 COPY . .
 
-RUN yarn build:prod
+RUN yarn build
 
 FROM nginx:alpine
 
-COPY --from=builder /usr/src/app/dist/angular-starter/ /usr/share/nginx/html
+COPY --from=builder /usr/src/app/dist/build/browser /usr/share/nginx/html
