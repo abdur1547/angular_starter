@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  count: number = 0;
+  count = signal(0);
 
   clickHandler() {
-    this.count += 1
+    this.count.update(value => value+1)
   }
 }
