@@ -1,0 +1,10 @@
+<h4>Login</h4>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    <label for="email">Email: </label>
+    <input type="email" name="email" id="email" formControlName="email"><br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" formControlName="password"><br>
+    <button type="submit">Login</button>
+</form>
+<button (click)="getTokens()">Tokens</button>
+<button (click)="clearTokens()">Clear</button>
