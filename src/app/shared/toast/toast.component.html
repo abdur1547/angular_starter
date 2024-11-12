@@ -1,0 +1,4 @@
+<div *ngFor="let toast of toastService.toasts$ | async; let i=index">
+    {{ toast.message }}
+    <button (click)="remove(i)">X</button>
+</div>
