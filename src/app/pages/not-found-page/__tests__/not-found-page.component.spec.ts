@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NotFoundPageComponent } from './not-found-page.component';
+import { NotFoundPageComponent } from '../not-found-page.component';
 
 describe('NotFoundPageComponent', () => {
   let component: NotFoundPageComponent;
@@ -10,7 +10,7 @@ describe('NotFoundPageComponent', () => {
     await TestBed.configureTestingModule({
       imports: [NotFoundPageComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(NotFoundPageComponent);
     component = fixture.componentInstance;
