@@ -14,7 +14,7 @@ export class BaseHttpService {
   });
 
   protected get<T>(url: string) {
-    return this.http.get<T>(url, {headers: this.defaultHeaders}).pipe(
+    return this.http.get<T>(`${this.baseUrl}/${url}`, {headers: this.defaultHeaders}).pipe(
       catchError(this.handleError)
     );
   }

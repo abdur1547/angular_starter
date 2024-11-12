@@ -18,15 +18,6 @@ export class LoginComponent {
   });
 
   login() {
-    console.log(this.loginForm.value);
-    this.loginService.login();
+    this.loginService.login(this.loginForm.value);
   };
-
-  jsonReq() {
-    this.loginService.jsonReq();
-  }
-  
-  teams() {
-    this.loginService.teams();
-  }
 }
