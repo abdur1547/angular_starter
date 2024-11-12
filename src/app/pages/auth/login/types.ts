@@ -1,12 +1,12 @@
-export type LoginCredentials = {
+export interface LoginCredentials {
     email: string;
     password: string;
-};
+}
 
-export type LoginResponce = {
+export interface LoginResponce {
     success: boolean;
     data: {
         access_token: string;
         refresh_token: string;
     }
-};
+}
