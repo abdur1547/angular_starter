@@ -8,7 +8,7 @@ import { TokenService } from '../../../core/services/token.service';
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrl: './login.component.scss',
 })
 export class LoginComponent {
   private loginService: LoginService = inject(LoginService);
@@ -16,13 +16,15 @@ export class LoginComponent {
 
   loginForm: FormGroup = new FormGroup({
     email: new FormControl(''),
-    password: new FormControl('')
+    password: new FormControl(''),
   });
 
   login() {
-    this.loginService.login(this.loginForm.value)
-      .subscribe(tokens => this.tokenService.saveTokens(tokens.data.access_token, tokens.data.refresh_token))
-  };
+    this.loginService.login(this.loginForm.value).subscribe((tokens) => {
+      this.tokenService.saveAccessTokens(tokens.data.access_token);
+      this.tokenService.saveRefreshTokens(tokens.data.refresh_token);
+    });
+  }
 
   getTokens() {
     console.log(this.tokenService.getAccessToken());
