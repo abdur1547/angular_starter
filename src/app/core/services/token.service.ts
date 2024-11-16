@@ -9,12 +9,14 @@ export class TokenService {
   private refreshTokenKey = 'refresh_token';
   private cookieService: CookieService = inject(CookieService);
 
-  saveTokens(accessToken: string, refreshToken: string): void {
+  saveAccessTokens(accessToken: string): void {
     this.cookieService.set(this.accessTokenKey, accessToken, {
       secure: true,
       sameSite: 'Strict',
     });
+  }
 
+  saveRefreshTokens(refreshToken: string): void {
     this.cookieService.set(this.refreshTokenKey, refreshToken, {
       secure: true,
       sameSite: 'Strict',
