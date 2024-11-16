@@ -17,12 +17,10 @@ export class AppComponent implements OnInit, OnDestroy {
   title = 'temp';
 
   ngOnInit() {
-    console.log('App OnInit');
     this.tokenService.autoRefreshAccessToken();
   }
 
   ngOnDestroy() {
-    console.log('App OnDestroy');
     this.tokenService.clearTimer();
   }
 
