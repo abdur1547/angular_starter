@@ -1,4 +1,4 @@
-import { ApplicationConfig, ErrorHandler, provideExperimentalZonelessChangeDetection } from '@angular/core';
+import { ApplicationConfig, ErrorHandler, provideZonelessChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
@@ -7,7 +7,7 @@ import { authInterceptor, httpErrorInterceptor, GlobalErrorHandlingService } fro
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideExperimentalZonelessChangeDetection(),
+    provideZonelessChangeDetection(),
     provideRouter(routes),
     { provide: ErrorHandler, useClass: GlobalErrorHandlingService },
     provideHttpClient(withInterceptors([authInterceptor, httpErrorInterceptor]))
