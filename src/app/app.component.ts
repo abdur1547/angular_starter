@@ -4,11 +4,10 @@ import { ToastComponent, NavbarComponent } from './shared';
 import { ToastService, TokenService } from './core';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, NavbarComponent, ToastComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+    selector: 'app-root',
+    imports: [RouterOutlet, NavbarComponent, ToastComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit, OnDestroy {
   private tokenService: TokenService = inject(TokenService);
