@@ -1,28 +1,35 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { ToastMessageType, ToastType } from '../types';
 import { TOAST_TIMEOUT } from '../constants';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ToastService {
+  private _toasts = signal<ToastType[]>([]);
 
-  private toasts = new BehaviorSubject<ToastType[]>([]);
-  toasts$ = this.toasts.asObservable();
+  get toasts() {
+    return this._toasts.asReadonly();
+  }
 
-  add(message: string, type: ToastMessageType = 'success', duration: number = TOAST_TIMEOUT) {
+  add(
+    message: string,
+    type: ToastMessageType = 'success',
+    duration: number = TOAST_TIMEOUT
+  ) {
     const newToast: ToastType = { message, duration, type };
-    const currentToasts = this.toasts.getValue();
-    this.toasts.next([...currentToasts, newToast]);
+    const currentToasts = this._toasts();
+    this._toasts.set([...currentToasts, newToast]);
+
     setTimeout(() => {
       this.remove(0);
     }, duration);
   }
 
   remove(index: number) {
-    const currentToasts = this.toasts.getValue();
-    currentToasts.splice(index, 1);
-    this.toasts.next([...currentToasts]);
+    const currentToasts = this._toasts();
+    const updatedToasts = [...currentToasts];
+    updatedToasts.splice(index, 1);
+    this._toasts.set(updatedToasts);
   }
 }

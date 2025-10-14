@@ -17,7 +17,7 @@ describe('AppComponent', () => {
   it(`should have the 'temp' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('temp');
+    expect(app.title()).toEqual('temp');
   });
 
   it('should render title', () => {
@@ -25,5 +25,15 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, temp');
+  });
+
+  it('should increment count when handleClick is called', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const initialCount = app.count();
+
+    app.handleClick();
+
+    expect(app.count()).toEqual(initialCount + 1);
   });
 });

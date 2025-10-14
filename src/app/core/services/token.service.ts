@@ -1,4 +1,4 @@
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { BaseHttpService } from './base-http.service';
 import { Observable } from 'rxjs';
@@ -12,6 +12,17 @@ export class TokenService extends BaseHttpService {
   private refreshTokenKey = 'refresh_token';
   private intervale: number | null = null;
   private cookieService: CookieService = inject(CookieService);
+
+  private _isAuthenticated = signal(false);
+
+  get isAuthenticated() {
+    return this._isAuthenticated.asReadonly();
+  }
+
+  initializeAuthState(): void {
+    const token = this.cookieService.get(this.accessTokenKey);
+    this._isAuthenticated.set(!!token);
+  }
 
   autoRefreshAccessToken(): void {
     this.intervale = window.setInterval(() => {
@@ -40,6 +51,7 @@ export class TokenService extends BaseHttpService {
       secure: true,
       sameSite: 'Strict',
     });
+    this._isAuthenticated.set(true);
   }
 
   saveRefreshTokens(refreshToken: string): void {
@@ -50,7 +62,9 @@ export class TokenService extends BaseHttpService {
   }
 
   getAccessToken(): string | null {
-    return this.cookieService.get(this.accessTokenKey) || null;
+    const token = this.cookieService.get(this.accessTokenKey) || null;
+    this._isAuthenticated.set(!!token);
+    return token;
   }
 
   getRefreshToken(): string | null {
@@ -60,6 +74,7 @@ export class TokenService extends BaseHttpService {
   clearTokens(): void {
     this.cookieService.delete(this.accessTokenKey, '/', '', true, 'Strict');
     this.cookieService.delete(this.refreshTokenKey, '/', '', true, 'Strict');
+    this._isAuthenticated.set(false);
   }
 }
 
