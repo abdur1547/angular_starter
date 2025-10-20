@@ -144,6 +144,14 @@
     "@angular-devkit/core" "20.3.5"
     rxjs "7.8.2"
 
+"@angular-devkit/architect@0.2003.6":
+  version "0.2003.6"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.2003.6.tgz#e242a12e49c577703a77ac26d2fff321d1ab336c"
+  integrity sha512-VtXxfJzrBZ8MQN83shXNaTUaLSOIwa+4/3LD5drxSnHuYJrz+d3FIApWAxcA9QzucsTDZwXyFxaWZN/e5XVm6g==
+  dependencies:
+    "@angular-devkit/core" "20.3.6"
+    rxjs "7.8.2"
+
 "@angular-devkit/architect@>= 0.1900.0 < 0.2000.0":
   version "0.1902.13"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1902.13.tgz#8924a49bedef0ca26a4c995d202f1a8007e0dc38"
@@ -246,12 +254,24 @@
     rxjs "7.8.2"
     source-map "0.7.6"
 
-"@angular-devkit/schematics@20.3.5":
-  version "20.3.5"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-20.3.5.tgz#4681fde63f11c70748ae873a35c1fea9fa9c0787"
-  integrity sha512-BDizJp7QIoCyMZmuGKoryNUH3QgFPnkEIv0gRdpLhZum4+ZN/DYWaf/jSSGnSVGK88oMrgq7420VEjYPlgJ5MA==
+"@angular-devkit/core@20.3.6":
+  version "20.3.6"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-20.3.6.tgz#db336cebf6b0e733008aec963347f6b3944f0932"
+  integrity sha512-uLRk3865Iz/EO9Zm/mrFfdyoZinJBihXE6HVDYRYjAqsgW14LsD8pkpWy9+LYlOwcH96Ndnev+msxaTJaNXtPg==
   dependencies:
-    "@angular-devkit/core" "20.3.5"
+    ajv "8.17.1"
+    ajv-formats "3.0.1"
+    jsonc-parser "3.3.1"
+    picomatch "4.0.3"
+    rxjs "7.8.2"
+    source-map "0.7.6"
+
+"@angular-devkit/schematics@20.3.6":
+  version "20.3.6"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-20.3.6.tgz#8741661e81ae49bb8052b400e4a8773c91d726d6"
+  integrity sha512-QD7QS1oR0XcZ9ZI4D1c4JjKmSn2up/ocOU2FS1mMO7S5RtAZMsPv4J3r+6ywHA2ev2sRySOQ0D8OYBcEuYX9Jw==
+  dependencies:
+    "@angular-devkit/core" "20.3.6"
     jsonc-parser "3.3.1"
     magic-string "0.30.17"
     ora "8.2.0"
@@ -368,18 +388,18 @@
   optionalDependencies:
     lmdb "3.4.2"
 
-"@angular/cli@^20.3.5":
-  version "20.3.5"
-  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-20.3.5.tgz#0b2f37fb7d913fee83b3563589b39ca564e7e7c4"
-  integrity sha512-UA843Mh5uHIWnrzKUotGmhJmvefyEizFS7X8xJEUJsX5pa1EKUB/145rKHoLHxRRpHGxFcXtvciJCksFz1lSBA==
+"@angular/cli@^20.3.6":
+  version "20.3.6"
+  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-20.3.6.tgz#628064fb18c57248d23d930f44122955413d31be"
+  integrity sha512-1RozAub7Gcl5ES3vBYatIgoMDgujlvySwHARoYT+1VhbYvM0RTt4sn2aDhHxqG0GcyiXR5zISkzJvldaY2nQCQ==
   dependencies:
-    "@angular-devkit/architect" "0.2003.5"
-    "@angular-devkit/core" "20.3.5"
-    "@angular-devkit/schematics" "20.3.5"
+    "@angular-devkit/architect" "0.2003.6"
+    "@angular-devkit/core" "20.3.6"
+    "@angular-devkit/schematics" "20.3.6"
     "@inquirer/prompts" "7.8.2"
     "@listr2/prompt-adapter-inquirer" "3.0.1"
     "@modelcontextprotocol/sdk" "1.17.3"
-    "@schematics/angular" "20.3.5"
+    "@schematics/angular" "20.3.6"
     "@yarnpkg/lockfile" "1.1.0"
     algoliasearch "5.35.0"
     ini "5.0.0"
@@ -2741,13 +2761,13 @@
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.52.4.tgz#5b2dd648a960b8fa00d76f2cc4eea2f03daa80f4"
   integrity sha512-bf9PtUa0u8IXDVxzRToFQKsNCRz9qLYfR/MpECxl4mRoWYjAeFjgxj1XdZr2M/GNVpT05p+LgQOHopYDlUu6/w==
 
-"@schematics/angular@20.3.5":
-  version "20.3.5"
-  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-20.3.5.tgz#8adad4116d7cf2c3e93f4488f7b541190314694a"
-  integrity sha512-mrVWO64psqah8E8HgpF30NMizVZyX6aH3k6hqf2tDgU3+giKX7xvTG9UQCaXA4MLBsQbpcWAmwPLipwLnPm8wA==
+"@schematics/angular@20.3.6":
+  version "20.3.6"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-20.3.6.tgz#b655f73f6c585921e8799bcde5d8ec400949d40a"
+  integrity sha512-YPIEyKPBOyJYlda5fA49kMThzZ4WidomEMDghshux8xidbjDaPWBZdyVPQj3IXyW0teGlUM/TH0TH2weumMZrg==
   dependencies:
-    "@angular-devkit/core" "20.3.5"
-    "@angular-devkit/schematics" "20.3.5"
+    "@angular-devkit/core" "20.3.6"
+    "@angular-devkit/schematics" "20.3.6"
     jsonc-parser "3.3.1"
 
 "@sigstore/bundle@^3.0.0":
