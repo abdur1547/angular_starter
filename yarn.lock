@@ -399,10 +399,10 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/compiler-cli@^20.3.15":
-  version "20.3.15"
-  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-20.3.15.tgz#71c30ac343ee708efabb99d08305c4b3e8e6899a"
-  integrity sha512-8sJoxodxsfyZ8eJ5r6Bx7BCbazXYgsZ1+dE8t5u5rTQ6jNggwNtYEzkyReoD5xvP+MMtRkos3xpwq4rtFnpI6A==
+"@angular/compiler-cli@^20.3.16":
+  version "20.3.16"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-20.3.16.tgz#cc3de2ccc20e75322e4d8cd071e461d7116ae03a"
+  integrity sha512-l3xF/fXfJAl/UrNnH9Ufkr79myjMgXdHq1mmmph2UnpeqilRB1b8lC9sLBV9MipQHVn3dwocxMIvtrcryfOaXw==
   dependencies:
     "@babel/core" "7.28.3"
     "@jridgewell/sourcemap-codec" "^1.4.14"
