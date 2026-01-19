@@ -28,7 +28,7 @@
     "@angular-devkit/build-angular": "^20.3.10",
     "@angular/cli": "^20.3.10",
     "@angular/compiler-cli": "^20.3.16",
-    "@types/jasmine": "~5.1.13",
+    "@types/jasmine": "~5.1.15",
     "angular-eslint": "19.7.0",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
