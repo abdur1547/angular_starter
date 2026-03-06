@@ -410,10 +410,10 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/core@^20.3.17":
-  version "20.3.17"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-20.3.17.tgz#e396f0f2a6f47a85524e8d313082f65e35001059"
-  integrity sha512-YlQqxMeHI9XJw7I7oM3hYFQd4lQbK37IdlD9ztROIw5FjX6i6lmLU7+X1MQGSRi2r+X9l3IZtl33hRTNvkoUBw==
+"@angular/core@^21.2.0":
+  version "21.2.0"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-21.2.0.tgz#ec63688f663e69c6afdaa74c1e589ee2bd7dca4d"
+  integrity sha512-VnTbmZq3g3Q+s3nCZ8VUDMLjMezOg/bqUxAJ/DrRWCrEcTP5JO3mrNPs3FHj+qlB0T+BQP7uQv6QTzPVKybwoA==
   dependencies:
     tslib "^2.3.0"
 
