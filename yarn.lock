@@ -6191,10 +6191,10 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-ngx-cookie-service@^21.1.0:
-  version "21.1.0"
-  resolved "https://registry.yarnpkg.com/ngx-cookie-service/-/ngx-cookie-service-21.1.0.tgz#4afa25311adecf562b2af11f1f43b798f19feac2"
-  integrity sha512-W3IsoMImUVNt0ZuMesEuQJUGrEgKJaPkQGGfCg7zjUGM/EaeAIbIkfNktNIgUDmeUYapZQJa2pSg4YuK4v1gVQ==
+ngx-cookie-service@^21.3.1:
+  version "21.3.1"
+  resolved "https://registry.yarnpkg.com/ngx-cookie-service/-/ngx-cookie-service-21.3.1.tgz#b98b8e5fb0ac5c230fd2fb0f37c02c99e8866461"
+  integrity sha512-8VEA2W7W2W3yPXhemJoVtXxr+3WW2DNLV4OaCIKDzLdzUUxJ6SzPHMmXXa26Pg8pa+fZxHK1hZfqJfUxr9RMBw==
   dependencies:
     tslib "^2.8.1"
 
